@@ -101,15 +101,33 @@ function totalCost(product){
         localStorage.setItem("totalCost",product.price);}
 }
 function displayCart(){
-    // let cartItems = localStorage.getItem("productsInCart");
-    // cartItems = JSON.parse(cartItems);
-    // // console.log(cartItems)
-    // let productContainer = document.querySelector(".products-container");
-    // if (cartItems && productContainer){
-    //     productContainer.innerHTML='';
-    //     Object.values(cartItems)
-    // }
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    // console.log(cartItems)
+    let productContainer = document.querySelector(".products");
+    if (cartItems && productContainer){
+        productContainer.innerHTML='';//initially empty
+        Object.values(cartItems).map(item =>{
+            productContainer.innerHTML += `
+            <div class="product">
+                <img width="50px" height="50px" src="./images/${item.tag}.jpg">
+                <span>${item.name}</span>
+            </div>
+            `
+        })
+    }
 }
 
 onLoadCartNumber();
 displayCart();
+
+
+            // <div class="price">${item.price}</div>
+            // <div class="quantity">
+            //     <button type="button">Decrease</button>
+            //     <span>${item.inCart}</span>
+            //     <button type="button">Increase</button>
+            // </div>
+            // <div class="total">                
+            //     <span>${item.inCart * item.price}</span>
+            // </div>
