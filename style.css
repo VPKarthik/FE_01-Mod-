@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: peru;    
+    height: 150px;    
+}
+
+h2{
+    font-size: 30px;
+}
+nav{
+    position: relative;
+    display: flex;    
+    padding: 50px 60px 0 60px;
+    justify-content: space-between;
+}
+
+nav li{
+    list-style: none;
+    padding: 0px 10px 0px 10px;
+    display: inline-block;
+}
+
+nav li a{
+    padding: 5px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: larger;
+    border: 1px solid gray;
+    background-color: grey;
+    border-radius: 15px;
+}
+
+.container,
+.products-container{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin: 50px 0px 0px 50px;
+    padding: 0px 0px 200px 0px;
+    align-items: center;
+}
+
+.image{
+    margin: 0px 20px 0px 20px;
+    position: relative;    
+}
+
+.image:hover .carting1,
+.image:hover .carting2,
+.image:hover .carting3,
+.image:hover .carting4,
+.image:hover .carting5{
+    bottom: 500px;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+    
+}
+.products-container{
+    justify-content: space-between;
+}
+
+.product-header{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    border-bottom: 5px solid black;
+}
+.product-title{
+    width: 40%;
+
+}
+.price{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.total{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+.quantity{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
